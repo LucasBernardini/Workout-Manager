@@ -34,11 +34,11 @@ export default function Input({ addToList }) {
       //to clear fields
       setWorkout({
         ...workout,
-        bodyPart: " ",
-        workoutName: " ",
-        weight: " ",
-        sets: " ",
-        reps: " ",
+        bodyPart: "",
+        workoutName: "",
+        weight: "",
+        sets: "",
+        reps: "",
       });
     } else {
         alert('please complete all of the fields')
