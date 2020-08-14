@@ -34,19 +34,21 @@ export default function Input({ addToList }) {
       //to clear fields
       setWorkout({
         ...workout,
-        bodyPart: "",
-        workoutName: "",
-        weight: "",
-        sets: "",
-        reps: "",
+        bodyPart: " ",
+        workoutName: " ",
+        weight: " ",
+        sets: " ",
+        reps: " ",
       });
+    } else {
+        alert('please complete all of the fields')
     }
   };
 
   return (
     <form onSubmit={handleSubmit}>
       <label htmlFor="bodyPart">Body Part:</label>
-      <select onChange={handleChange} name="bodyPart">
+      <select value={workout.bodyPart} onChange={handleChange} name="bodyPart">
         <option value="select">Select One</option>
         <option value="back">Back</option>
         <option value="chest">Chest</option>
@@ -63,16 +65,16 @@ export default function Input({ addToList }) {
       </select>
 
       <label htmlFor="workoutName">Workout Name:</label>
-      <input onChange={handleChange} name="workoutName" type="text" />
+      <input value={workout.workoutName} onChange={handleChange} name="workoutName" type="text" />
 
       <label htmlFor="weight">Weight:</label>
-      <input onChange={handleChange} name="weight" type="number" />
+      <input value={workout.weight} onChange={handleChange} name="weight" type="number" />
 
       <label htmlFor="sets">Sets:</label>
-      <input onChange={handleChange} name="sets" type="number" />
+      <input value={workout.sets} onChange={handleChange} name="sets" type="number" />
 
       <label htmlFor="reps">Reps:</label>
-      <input onChange={handleChange} type="number" name="reps" />
+      <input value={workout.reps} onChange={handleChange} type="number" name="reps" />
 
       <button type="submit">Post</button>
     </form>
