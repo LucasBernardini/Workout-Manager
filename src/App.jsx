@@ -10,11 +10,15 @@ function App() {
 
   const [list, setList] = useState([]);
 
+  function addToList(item) {
+    setList([item, ...list]);
+  }
+
   return (
     <div className="App">
       <Header />
-      <Input />
-      <WorkoutList />
+      <Input addToList={addToList} />
+      <WorkoutList list={list}/>
       <Footer />
     </div>
   );

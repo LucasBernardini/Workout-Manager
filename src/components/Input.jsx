@@ -1,29 +1,50 @@
-import React, {useState} from "react";
-import './styling/input.scss'
+import React, { useState } from "react";
+import { v4 as uuidv4 } from "uuid";
+import "./styling/input.scss";
 
-export default function Input() {
+export default function Input({ addToList }) {
+  const [workout, setWorkout] = useState({
+    id: "",
+    bodyPart: "",
+    workoutName: "",
+    weight: "",
+    sets: "",
+    reps: "",
+    completed: false,
+  });
 
-    const [workout, setWorkout] = useState({
-        id: "",
+  const handleChange = (e) => {
+    const value = e.target.value;
+    setWorkout({
+      ...workout,
+      [e.target.name]: value,
+    });
+    console.log(workout);
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    if (
+      workout.workoutName.trim() ||
+      workout.weight.trim() ||
+      workout.sets.trim() ||
+      workout.reps.trim()
+    ) {
+      addToList({ ...workout, id: { uuidv4 } });
+      //to clear fields
+      setWorkout({
+        ...workout,
         bodyPart: "",
         workoutName: "",
         weight: "",
         sets: "",
         reps: "",
-        completed: false
-    })
-
-    const handleChange = (e) => {
-        const value = e.target.value;
-        setWorkout({
-            ...workout,
-            [e.target.name]: value
-        });
-        console.log(workout)
+      });
     }
+  };
 
   return (
-    <form>
+    <form onSubmit={handleSubmit}>
       <label htmlFor="bodyPart">Body Part:</label>
       <select onChange={handleChange} name="bodyPart">
         <option value="select">Select One</option>
