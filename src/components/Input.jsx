@@ -50,18 +50,18 @@ export default function Input({ addToList }) {
       <label htmlFor="bodyPart">Body Part:</label>
       <select value={workout.bodyPart} onChange={handleChange} name="bodyPart">
         <option value="select">Select One</option>
-        <option value="back">Back</option>
-        <option value="chest">Chest</option>
-        <option value="shoulder">Shoulders</option>
-        <option value="bicep">Bicep</option>
-        <option value="tricep">Tricep</option>
-        <option value="forearm">Forearms</option>
-        <option value="quad">Quads</option>
-        <option value="hamstring">Hamstring</option>
-        <option value="calves">Calves</option>
-        <option value="glutes">Glutes</option>
-        <option value="abs">Abs</option>
-        <option value="other">Other</option>
+        <option value="Back">Back</option>
+        <option value="Chest">Chest</option>
+        <option value="Shoulders">Shoulders</option>
+        <option value="Biceps">Bicep</option>
+        <option value="Triceps">Tricep</option>
+        <option value="Forearms">Forearms</option>
+        <option value="Quads">Quads</option>
+        <option value="Hamstrings">Hamstring</option>
+        <option value="Calves">Calves</option>
+        <option value="Glutes">Glutes</option>
+        <option value="Abs">Abs</option>
+        <option value="Other">Other</option>
       </select>
 
       <label htmlFor="workoutName">Workout Name:</label>

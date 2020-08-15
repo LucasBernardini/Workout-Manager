@@ -11,8 +11,8 @@ const LOCAL_STORAGE_KEY = "workout-plan";
 function App() {
   const [list, setList] = useState([]);
   
-  //In load / inital render
-  
+  //On load / inital render
+
   useEffect(() => {
     const workoutStorage = JSON.parse(localStorage.getItem(LOCAL_STORAGE_KEY));
     if (workoutStorage) {
