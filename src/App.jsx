@@ -10,7 +10,7 @@ const LOCAL_STORAGE_KEY = "workout-plan";
 
 function App() {
   const [list, setList] = useState([]);
-  
+  console.log(list)
   //On load / inital render
 
   useEffect(() => {
@@ -24,17 +24,33 @@ function App() {
     localStorage.setItem(LOCAL_STORAGE_KEY, JSON.stringify(list));
   }, [list]);
     
-
-
   function addToList(item) {
     setList([item, ...list]);
+  }
+
+  function toggleCompleted(id) {
+    setList(
+      list.map(item => {
+        if (item.id === id) {
+          return{
+            ...item,
+            completed: !item.completed
+          }
+        }
+        return item;
+      })
+    )
+  }
+
+  function removeItem(id){
+    setList(list.filter(item => item.id !== id));
   }
 
   return (
     <div className="App">
       <Header />
       <Input addToList={addToList} />
-      <WorkoutList list={list} />
+      <WorkoutList list={list} toggleCompleted={toggleCompleted} removeItem={removeItem}/>
       <Footer />
     </div>
   );

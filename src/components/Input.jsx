@@ -39,6 +39,7 @@ export default function Input({ addToList }) {
         weight: "",
         sets: "",
         reps: "",
+        completed: false,
       });
     } else {
         alert('please complete all of the fields')
