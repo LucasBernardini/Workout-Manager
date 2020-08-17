@@ -1,15 +1,12 @@
 import React, { useState } from "react";
 import { v4 as uuidv4 } from "uuid";
 import "./styling/input.scss";
-import { Button } from '@material-ui/core';
-import TextField from '@material-ui/core/TextField';
-import Select from '@material-ui/core/Select';
-import MenuItem from '@material-ui/core/MenuItem';
-import InputLabel from '@material-ui/core/InputLabel';
-import FormControl from '@material-ui/core/FormControl';
-
-
-
+import { Button } from "@material-ui/core";
+import TextField from "@material-ui/core/TextField";
+import Select from "@material-ui/core/Select";
+import MenuItem from "@material-ui/core/MenuItem";
+import InputLabel from "@material-ui/core/InputLabel";
+import FormControl from "@material-ui/core/FormControl";
 
 export default function Input({ addToList }) {
   const [workout, setWorkout] = useState({
@@ -51,12 +48,13 @@ export default function Input({ addToList }) {
         completed: false,
       });
     } else {
-        alert('please complete all of the fields')
+      alert("please complete all of the fields");
     }
   };
 
   return (
-    <FormControl onSubmit={handleSubmit}>
+      <form onSubmit={handleSubmit}>
+    <FormControl>
       <InputLabel htmlFor="bodyPart">Body Part:</InputLabel>
       <Select value={workout.bodyPart} onChange={handleChange} name="bodyPart">
         <MenuItem value="select">Select One</MenuItem>
@@ -74,15 +72,40 @@ export default function Input({ addToList }) {
         <MenuItem value="Other">Other</MenuItem>
       </Select>
 
-      <TextField value={workout.workoutName} onChange={handleChange} label="Workout Name" name="workoutName" type="text" />
+      <TextField
+        value={workout.workoutName}
+        onChange={handleChange}
+        label="Workout Name"
+        name="workoutName"
+        type="text"
+      />
 
-      <TextField value={workout.weight} onChange={handleChange} label="Weight" name="weight" type="number" />
+      <TextField
+        value={workout.weight}
+        onChange={handleChange}
+        label="Weight"
+        name="weight"
+        type="number"
+      />
 
-      <TextField value={workout.sets} onChange={handleChange} label="Sets" name="sets" type="number" />
+      <TextField
+        value={workout.sets}
+        onChange={handleChange}
+        label="Sets"
+        name="sets"
+        type="number"
+      />
 
-      <TextField value={workout.reps} onChange={handleChange} label="Reps" type="number" name="reps" />
+      <TextField
+        value={workout.reps}
+        onChange={handleChange}
+        label="Reps"
+        type="number"
+        name="reps"
+      />
 
-      <Button type="submit">Post</Button>
+      <Button variant="contained" type="submit">Post</Button>
     </FormControl>
+      </form>
   );
 }
