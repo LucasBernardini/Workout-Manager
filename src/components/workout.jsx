@@ -1,4 +1,5 @@
 import React from 'react'
+import { Button } from '@material-ui/core';
 
 export default function Workout({item, toggleCompleted, removeItem}) {
     function handleCheckClick() {
@@ -22,7 +23,7 @@ export default function Workout({item, toggleCompleted, removeItem}) {
           <p className="workout__content">Sets: {item.sets}</p>
           <p className="workout__content">Reps: {item.reps}</p>
           </div>
-          <button onClick={handleRemoveClick} >Delete</button>
+          <Button onClick={handleRemoveClick} >Delete</Button>
         </div>
     )
 }
