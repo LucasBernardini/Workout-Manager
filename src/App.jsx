@@ -4,6 +4,8 @@ import Footer from "./components/Footer";
 import Input from "./components/Input";
 import WorkoutList from "./components/WorkoutList";
 
+import 'fontsource-roboto';
+
 import "./App.css";
 
 const LOCAL_STORAGE_KEY = "workout-plan";

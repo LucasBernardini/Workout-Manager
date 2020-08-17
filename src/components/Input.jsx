@@ -1,6 +1,15 @@
 import React, { useState } from "react";
 import { v4 as uuidv4 } from "uuid";
 import "./styling/input.scss";
+import { Button } from '@material-ui/core';
+import TextField from '@material-ui/core/TextField';
+import Select from '@material-ui/core/Select';
+import MenuItem from '@material-ui/core/MenuItem';
+import InputLabel from '@material-ui/core/InputLabel';
+import FormControl from '@material-ui/core/FormControl';
+
+
+
 
 export default function Input({ addToList }) {
   const [workout, setWorkout] = useState({
@@ -47,37 +56,33 @@ export default function Input({ addToList }) {
   };
 
   return (
-    <form onSubmit={handleSubmit}>
-      <label htmlFor="bodyPart">Body Part:</label>
-      <select value={workout.bodyPart} onChange={handleChange} name="bodyPart">
-        <option value="select">Select One</option>
-        <option value="Back">Back</option>
-        <option value="Chest">Chest</option>
-        <option value="Shoulders">Shoulders</option>
-        <option value="Biceps">Bicep</option>
-        <option value="Triceps">Tricep</option>
-        <option value="Forearms">Forearms</option>
-        <option value="Quads">Quads</option>
-        <option value="Hamstrings">Hamstring</option>
-        <option value="Calves">Calves</option>
-        <option value="Glutes">Glutes</option>
-        <option value="Abs">Abs</option>
-        <option value="Other">Other</option>
-      </select>
+    <FormControl onSubmit={handleSubmit}>
+      <InputLabel htmlFor="bodyPart">Body Part:</InputLabel>
+      <Select value={workout.bodyPart} onChange={handleChange} name="bodyPart">
+        <MenuItem value="select">Select One</MenuItem>
+        <MenuItem value="Back">Back</MenuItem>
+        <MenuItem value="Chest">Chest</MenuItem>
+        <MenuItem value="Shoulders">Shoulders</MenuItem>
+        <MenuItem value="Biceps">Bicep</MenuItem>
+        <MenuItem value="Triceps">Tricep</MenuItem>
+        <MenuItem value="Forearms">Forearms</MenuItem>
+        <MenuItem value="Quads">Quads</MenuItem>
+        <MenuItem value="Hamstrings">Hamstring</MenuItem>
+        <MenuItem value="Calves">Calves</MenuItem>
+        <MenuItem value="Glutes">Glutes</MenuItem>
+        <MenuItem value="Abs">Abs</MenuItem>
+        <MenuItem value="Other">Other</MenuItem>
+      </Select>
 
-      <label htmlFor="workoutName">Workout Name:</label>
-      <input value={workout.workoutName} onChange={handleChange} name="workoutName" type="text" />
+      <TextField value={workout.workoutName} onChange={handleChange} label="Workout Name" name="workoutName" type="text" />
 
-      <label htmlFor="weight">Weight:</label>
-      <input value={workout.weight} onChange={handleChange} name="weight" type="number" />
+      <TextField value={workout.weight} onChange={handleChange} label="Weight" name="weight" type="number" />
 
-      <label htmlFor="sets">Sets:</label>
-      <input value={workout.sets} onChange={handleChange} name="sets" type="number" />
+      <TextField value={workout.sets} onChange={handleChange} label="Sets" name="sets" type="number" />
 
-      <label htmlFor="reps">Reps:</label>
-      <input value={workout.reps} onChange={handleChange} type="number" name="reps" />
+      <TextField value={workout.reps} onChange={handleChange} label="Reps" type="number" name="reps" />
 
-      <button type="submit">Post</button>
-    </form>
+      <Button type="submit">Post</Button>
+    </FormControl>
   );
 }

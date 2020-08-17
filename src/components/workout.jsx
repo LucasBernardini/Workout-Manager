@@ -1,5 +1,6 @@
 import React from 'react'
-import { Button } from '@material-ui/core';
+import { Button, Typography } from '@material-ui/core';
+import Checkbox from '@material-ui/core/Checkbox';
 
 export default function Workout({item, toggleCompleted, removeItem}) {
     function handleCheckClick() {
@@ -13,8 +14,8 @@ export default function Workout({item, toggleCompleted, removeItem}) {
 
     return (
             <div className="workout__item" >
-          <input type="checkbox" onClick={handleCheckClick}/>
-          <div style={{
+          <Checkbox type="checkbox" onClick={handleCheckClick}/>
+          <Typography variant="body1" style={{
             textDecoration: item.completed ? 'line-through' : null
           }}> 
           <p className="workout__content">Body Part: {item.bodyPart}</p>
@@ -22,7 +23,7 @@ export default function Workout({item, toggleCompleted, removeItem}) {
           <p className="workout__content">Weight: {item.weight}</p>
           <p className="workout__content">Sets: {item.sets}</p>
           <p className="workout__content">Reps: {item.reps}</p>
-          </div>
+          </Typography>
           <Button onClick={handleRemoveClick} >Delete</Button>
         </div>
     )
