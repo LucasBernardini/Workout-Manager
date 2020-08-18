@@ -1,6 +1,7 @@
 import React from 'react'
 import { Button, Typography } from '@material-ui/core';
 import Checkbox from '@material-ui/core/Checkbox';
+import './styling/workoutList.scss'
 
 export default function Workout({item, toggleCompleted, removeItem}) {
     function handleCheckClick() {

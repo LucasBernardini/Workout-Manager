@@ -44,3 +44,9 @@ background-color: $white;
     transform: rotate(360deg);
   }
 }
+
+.container__main{
+  display: flex;
+  justify-content: space-between;
+  margin: 2rem 6rem;
+}

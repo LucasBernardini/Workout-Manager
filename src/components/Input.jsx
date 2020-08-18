@@ -53,7 +53,7 @@ export default function Input({ addToList }) {
   };
 
   return (
-      <form onSubmit={handleSubmit}>
+      <form className="form" onSubmit={handleSubmit}>
     <FormControl>
       <InputLabel htmlFor="bodyPart">Body Part:</InputLabel>
       <Select value={workout.bodyPart} onChange={handleChange} name="bodyPart">
@@ -102,8 +102,10 @@ export default function Input({ addToList }) {
         type="number"
         name="reps"
       />
+      <div className="form__button">
+      <Button fullWidth={true} variant="contained" type="submit">Post</Button>
+      </div>
 
-      <Button variant="contained" type="submit">Post</Button>
     </FormControl>
       </form>
   );

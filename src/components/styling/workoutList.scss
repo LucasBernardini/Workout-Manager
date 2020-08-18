@@ -8,7 +8,9 @@
     color: $white;
 
 &__item{
+    &:not(:first-child){
     margin-top: 20px;
+    }
     display: flex;
     justify-content: space-evenly;
     width: fit-content;
@@ -16,6 +18,8 @@
     background-color: $grey;
     width: 40rem;
     border-radius: 5px;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
     & button{
         color: $white;
     }

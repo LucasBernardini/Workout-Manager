@@ -51,8 +51,10 @@ function App() {
   return (
     <div className="App">
       <Header />
+      <div className="container__main">
       <Input addToList={addToList} />
       <WorkoutList list={list} toggleCompleted={toggleCompleted} removeItem={removeItem}/>
+      </div>
       <Footer />
     </div>
   );
