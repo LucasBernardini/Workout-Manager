@@ -25,7 +25,7 @@ export default function Input({ addToList }) {
       ...workout,
       [e.target.name]: value,
     });
-    console.log(workout);
+    // console.log(workout);
   };
 
   const handleSubmit = (e) => {

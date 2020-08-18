@@ -12,7 +12,7 @@ const LOCAL_STORAGE_KEY = "workout-plan";
 
 function App() {
   const [list, setList] = useState([]);
-  console.log(list)
+  // console.log(list)
   //On load / inital render
 
   useEffect(() => {
