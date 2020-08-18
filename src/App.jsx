@@ -6,7 +6,7 @@ import WorkoutList from "./components/WorkoutList";
 
 import 'fontsource-roboto';
 
-import "./App.css";
+import "./App.scss";
 
 const LOCAL_STORAGE_KEY = "workout-plan";
 

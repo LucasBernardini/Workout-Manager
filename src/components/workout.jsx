@@ -14,7 +14,7 @@ export default function Workout({item, toggleCompleted, removeItem}) {
 
     return (
             <div className="workout__item" >
-          <Checkbox type="checkbox" onClick={handleCheckClick}/>
+          <Checkbox className="workout__item--check" type="checkbox" onClick={handleCheckClick}/>
           <Typography variant="body1" style={{
             textDecoration: item.completed ? 'line-through' : null
           }}> 

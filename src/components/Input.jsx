@@ -57,7 +57,6 @@ export default function Input({ addToList }) {
     <FormControl>
       <InputLabel htmlFor="bodyPart">Body Part:</InputLabel>
       <Select value={workout.bodyPart} onChange={handleChange} name="bodyPart">
-        <MenuItem value="select">Select One</MenuItem>
         <MenuItem value="Back">Back</MenuItem>
         <MenuItem value="Chest">Chest</MenuItem>
         <MenuItem value="Shoulders">Shoulders</MenuItem>

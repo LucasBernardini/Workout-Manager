@@ -1,8 +1,11 @@
+@import './variables';
+
 .workout{
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    color: $white;
 
 &__item{
     margin-top: 20px;
@@ -10,6 +13,16 @@
     justify-content: space-evenly;
     width: fit-content;
     align-items: center;
+    background-color: $grey;
+    width: 40rem;
+    border-radius: 5px;
+    & button{
+        color: $white;
+    }
+
+    &--check{
+        border: $white;
+    }
 }
     &__content{
     margin: auto 5rem;
