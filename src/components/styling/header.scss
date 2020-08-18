@@ -1,0 +1,29 @@
+@import './variables';
+
+.header{
+    background-color: $pink;
+    padding: 2rem;
+    display: flex;
+    justify-content: space-between;
+    &__container{
+        display: flex;
+        align-items: center;
+    }
+}
+
+.title{
+    margin: 0;
+    font-size: 36px;
+    &__sub{
+        margin: 0;
+        margin-left: 1rem;
+        font-size: 16px;
+    }
+}
+
+.list{
+    &__links{
+        text-decoration: none;
+        color: inherit;
+    }
+}
