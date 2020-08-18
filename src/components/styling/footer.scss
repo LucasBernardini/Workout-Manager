@@ -1,0 +1,26 @@
+@import './variables';
+
+.footer{
+    background-color: $pink;
+    padding: 2rem;
+    margin-top: 6rem;
+    &__head{
+        margin: 0;
+        padding-bottom: 2rem;
+    }
+    &__p{
+        margin: 0;
+    }
+}
+
+.link{
+    text-decoration: none;
+    color: inherit;
+    padding: .5rem;
+    background-color: #ffd5da;
+    border-radius: 10px;
+    &:hover{
+        background-color: #ffd5daa1;
+        color: $grey;
+    }
+}
