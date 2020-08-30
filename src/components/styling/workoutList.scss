@@ -2,23 +2,30 @@
 .workout{
     display: flex;
     flex-direction: column;
+    @include tabletSize{
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     color: $white;
-
-&__item{
-    &:not(:first-child){
-    margin-top: 20px;
     }
+&__item{
+    margin-top: 20px;
     display: flex;
-    justify-content: space-evenly;
-    width: fit-content;
     align-items: center;
     background-color: $grey;
-    width: 40rem;
     border-radius: 5px;
     padding-top: 1rem;
     padding-bottom: 1rem;
+    width: 20rem;
+    margin-right: 20px;
+    @include tabletSize{
+        margin-right: 0;
+        justify-content: space-evenly;
+        &:not(:first-child){
+        margin-top: 20px;
+        }
+        width: 40rem;
+    }
     & button{
         color: $white;
     }
@@ -28,6 +35,8 @@
     }
 }
     &__content{
+        @include tabletSize{
     margin: auto 5rem;
+        }
 }
 }
