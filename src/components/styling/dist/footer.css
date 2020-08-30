@@ -1,5 +1,5 @@
 .footer {
-  background-color: #F8C9CE;
+  background-color: #C3D0D9;
   padding: 2rem;
   margin-top: 6rem;
 }
@@ -15,10 +15,10 @@
   text-decoration: none;
   color: inherit;
   padding: 0.5rem;
-  background-color: #ffd5da;
+  background-color: #b7c5d8;
   border-radius: 10px;
 }
 .link:hover {
-  background-color: #ffd5daa1;
-  color: #6A728A;
+  background-color: #b7c5d8;
+  color: #D9D9D8;
 }
