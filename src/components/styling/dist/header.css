@@ -1,0 +1,25 @@
+.header {
+  background-color: #F8C9CE;
+  padding: 2rem;
+  display: flex;
+  justify-content: space-between;
+}
+.header__container {
+  display: flex;
+  align-items: center;
+}
+
+.title {
+  margin: 0;
+  font-size: 36px;
+}
+.title__sub {
+  margin: 0;
+  margin-left: 1rem;
+  font-size: 16px;
+}
+
+.list__links {
+  text-decoration: none;
+  color: inherit;
+}

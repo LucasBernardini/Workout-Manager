@@ -1,10 +1,6 @@
-@import './components/styling/reusable/mixins';
-
 html {
-background-color: $white;
+  background-color: #F6F4F4;
 }
-
-
 
 .App {
   text-align: center;
@@ -20,7 +16,6 @@ background-color: $white;
     animation: App-logo-spin infinite 20s linear;
   }
 }
-
 .App-header {
   background-color: #282c34;
   min-height: 100vh;
@@ -44,8 +39,7 @@ background-color: $white;
     transform: rotate(360deg);
   }
 }
-
-.container__main{
+.container__main {
   display: flex;
   justify-content: space-between;
   margin: 2rem 6rem;

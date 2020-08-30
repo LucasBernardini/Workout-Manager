@@ -1,5 +1,4 @@
-@import './variables';
-
+@import './reusable/mixins';
 .workout{
     display: flex;
     flex-direction: column;
